@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Antigravity'
-description 'Beehive Modern HUD'
+author 'Arcadeon'
+description 'Arcadeon Modern Hud'
 version '1.0.0'
 
 ui_page 'web/dist/index.html'

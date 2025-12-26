@@ -1,19 +1,52 @@
 Config = {}
 
-Config.Theme = {
-    id = "default", -- Cyan / Slate (Default)
-    borderRadius = "4px",
-    fontColor = "255, 255, 255",
-    fontColorHover = "255, 255, 255",
-    fontColorSelected = "0, 0, 0",
-    fontFamily = "Inter",
-    primaryBackground = "15, 23, 42",   -- Slate 900
-    primaryBackgroundSelected = "255, 255, 255",
-    secondaryBackground = "30, 41, 59", -- Slate 800
-    scaleOnHover = false,
-    sectionFontWeight = "normal",
-    smoothBackgroundTransition = false,
-    primaryColor400 = "34, 211, 238", -- Cyan 400
-    primaryColor500 = "6, 182, 212",  -- Cyan 500
-    primaryColor600 = "8, 145, 178"   -- Cyan 600
+-- General System Settings
+Config.Debug = false       -- Enable debug prints
+Config.CheckInterval = 200 -- How often to check player status (ms)
+
+-- Player Status HUD Configuration
+Config.Status = {
+    Enabled = true, -- Master toggle for Player HUD
+
+    -- Color Configuration (Hex Codes)
+    Colors = {
+        Health = '#FF3B30',  -- Red
+        Armor = '#007AFF',   -- Blue
+        Hunger = '#FF9500',  -- Orange
+        Thirst = '#5AC8FA',  -- Sky Blue
+        Stress = '#AF52DE',  -- Purple
+        Stamina = '#FFCC00', -- Yellow
+    },
+
+    -- Visibility Toggles
+    Toggles = {
+        Stress = true,  -- Show/Hide Stress indicator
+        Stamina = true, -- Show/Hide Stamina indicator
+    }
+}
+
+-- Vehicle HUD Configuration
+Config.Vehicle = {
+    Enabled = true, -- Master toggle for Vehicle HUD
+    UseMPH = false, -- Set to true for MPH, false for KMH
+
+    -- Feature Toggles
+    ShowRPM = true,
+    ShowFuel = true,
+    ShowGear = true,
+    ShowSeatbelt = true,
+}
+
+-- Info HUD Configuration (Top Right)
+Config.Info = {
+    Enabled = true, -- Master toggle for Info HUD
+
+    -- Feature Toggles
+    ShowTime = true,
+    ShowCash = true,
+    ShowJob = true,
+
+    -- Format Settings
+    TimeFormat = "%H:%M", -- Lua date format string
+    CurrencySymbol = "$", -- Currency prefix
 }
