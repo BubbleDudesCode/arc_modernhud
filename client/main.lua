@@ -59,6 +59,15 @@ CreateThread(function()
     end
 end)
 
+-- Send Config to UI on startup
+CreateThread(function()
+    Wait(1000) -- Small delay to ensure UI is ready
+    SendNUIMessage({
+        action = 'setupConfig',
+        data = Config
+    })
+end)
+
 -- Visibility Loop (Hide in Pause Menu)
 CreateThread(function()
     local lastPauseState = false
